@@ -18,6 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <inset key="separatorInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="82" id="VYk-M9-bHL" customClass="MatchesTableViewCell" customModule="PremierLeague" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="82"/>
@@ -31,7 +32,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="zeO-Ov-UVP"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="11"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -40,7 +41,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="BlD-Uc-1TZ"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="11"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -50,7 +51,7 @@
                                                 <constraint firstAttribute="width" constant="40" id="G1F-zR-fok"/>
                                                 <constraint firstAttribute="height" constant="40" id="uI1-ie-u0E"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="11"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -60,7 +61,7 @@
                                                 <constraint firstAttribute="height" constant="40" id="Dns-ug-e9k"/>
                                                 <constraint firstAttribute="width" constant="40" id="sTi-UU-GJk"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="11"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>

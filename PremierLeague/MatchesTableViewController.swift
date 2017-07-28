@@ -9,6 +9,8 @@
 import UIKit
 
 class MatchesTableViewController: UITableViewController {
+    
+    var arrMatchesList = [Match]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +18,10 @@ class MatchesTableViewController: UITableViewController {
         Match.matchList { (results) in
             for result in results!
             {
-                print("\(result)\n\n\n")
+                self.arrMatchesList.append(result)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
             }
         }
 
@@ -39,23 +44,38 @@ class MatchesTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return arrMatchesList.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MatchesTableViewCell
+        
+        let match = arrMatchesList[indexPath.row]
+        
+        cell.lblHometeam.text = match.homeTeamName
+        cell.lblAwayteam.text = match.awayTeamName
+        if (match.result["goalsHomeTeam"] as? String) == "<null>" && (match.result["goalsAwayTeam"] as? String) == "<null>"
+        {
+            cell.lblHomeScore.text = "-"
+            cell.lblAwayScore.text = "-"
+        }
+        else
+        {
+            cell.lblHomeScore.text = match.result["goalsHomeTeam"] as? String
+            cell.lblAwayScore.text = match.result["goalsAwayTeam"] as? String
 
-        // Configure the cell...
+        }
+
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

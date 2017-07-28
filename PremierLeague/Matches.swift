@@ -11,11 +11,11 @@ import Foundation
 
 
 struct Match {
-    let date:String?
-    let status:String?
-    let matchday:Int?
-    let homeTeamName:String?
-    let awayTeamName:String?
+    let date:String
+    let status:String
+    let matchday:Int
+    let homeTeamName:String
+    let awayTeamName:String
     let result:[String:AnyObject]
     
     enum sync:Error {
@@ -59,19 +59,22 @@ struct Match {
                     do
                     {
                         let myjson = try JSONSerialization.jsonObject(with: content, options: .mutableContainers) as? [String: AnyObject]
-                        print(myjson?["date"]!)
                         
-//                        let listMatches = myjson as? Array<[String:AnyObject]>
-//                        
-//                        for matches in myjson!
-//                        {
-//                            if let matchObject = try? Match(json: matches)
-//                            {
-//                                arrayMatchList.append(matchObject)
-//                                print("\(arrayMatchList)\n\n")
-//                            }
-//                        }
-//                        
+                       
+                        if let fixtures = myjson?["fixtures"] as? [[String:AnyObject]]
+                        {
+                            for fixture in fixtures
+                            {
+                                let matchObject = try? Match(json: fixture)
+                                
+                                arrayMatchList.append(matchObject!)
+                                
+
+                            }
+                            
+                        }
+                        
+                        
                     } catch
                     {
                         print("loi")
