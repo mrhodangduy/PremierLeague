@@ -1,0 +1,334 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63FC6F2F1F2B2FC600F4DF39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FC6F2E1F2B2FC600F4DF39 /* AppDelegate.swift */; };
+		63FC6F341F2B2FC600F4DF39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63FC6F321F2B2FC600F4DF39 /* Main.storyboard */; };
+		63FC6F371F2B2FC600F4DF39 /* PremierLeague.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63FC6F351F2B2FC600F4DF39 /* PremierLeague.xcdatamodeld */; };
+		63FC6F391F2B2FC600F4DF39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63FC6F381F2B2FC600F4DF39 /* Assets.xcassets */; };
+		63FC6F3C1F2B2FC600F4DF39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63FC6F3A1F2B2FC600F4DF39 /* LaunchScreen.storyboard */; };
+		63FC6F441F2B32C200F4DF39 /* MatchesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FC6F431F2B32C200F4DF39 /* MatchesTableViewCell.swift */; };
+		63FC6F461F2B333400F4DF39 /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FC6F451F2B333400F4DF39 /* Matches.swift */; };
+		63FC6F481F2B36E500F4DF39 /* MatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FC6F471F2B36E500F4DF39 /* MatchesTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		63FC6F2B1F2B2FC600F4DF39 /* PremierLeague.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PremierLeague.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63FC6F2E1F2B2FC600F4DF39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		63FC6F331F2B2FC600F4DF39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		63FC6F361F2B2FC600F4DF39 /* PremierLeague.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PremierLeague.xcdatamodel; sourceTree = "<group>"; };
+		63FC6F381F2B2FC600F4DF39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63FC6F3B1F2B2FC600F4DF39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		63FC6F3D1F2B2FC600F4DF39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63FC6F431F2B32C200F4DF39 /* MatchesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesTableViewCell.swift; sourceTree = "<group>"; };
+		63FC6F451F2B333400F4DF39 /* Matches.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matches.swift; sourceTree = "<group>"; };
+		63FC6F471F2B36E500F4DF39 /* MatchesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63FC6F281F2B2FC600F4DF39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63FC6F221F2B2FC600F4DF39 = {
+			isa = PBXGroup;
+			children = (
+				63FC6F2D1F2B2FC600F4DF39 /* PremierLeague */,
+				63FC6F2C1F2B2FC600F4DF39 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63FC6F2C1F2B2FC600F4DF39 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63FC6F2B1F2B2FC600F4DF39 /* PremierLeague.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63FC6F2D1F2B2FC600F4DF39 /* PremierLeague */ = {
+			isa = PBXGroup;
+			children = (
+				63FC6F2E1F2B2FC600F4DF39 /* AppDelegate.swift */,
+				63FC6F321F2B2FC600F4DF39 /* Main.storyboard */,
+				63FC6F381F2B2FC600F4DF39 /* Assets.xcassets */,
+				63FC6F3A1F2B2FC600F4DF39 /* LaunchScreen.storyboard */,
+				63FC6F3D1F2B2FC600F4DF39 /* Info.plist */,
+				63FC6F351F2B2FC600F4DF39 /* PremierLeague.xcdatamodeld */,
+				63FC6F431F2B32C200F4DF39 /* MatchesTableViewCell.swift */,
+				63FC6F451F2B333400F4DF39 /* Matches.swift */,
+				63FC6F471F2B36E500F4DF39 /* MatchesTableViewController.swift */,
+			);
+			path = PremierLeague;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63FC6F2A1F2B2FC600F4DF39 /* PremierLeague */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63FC6F401F2B2FC600F4DF39 /* Build configuration list for PBXNativeTarget "PremierLeague" */;
+			buildPhases = (
+				63FC6F271F2B2FC600F4DF39 /* Sources */,
+				63FC6F281F2B2FC600F4DF39 /* Frameworks */,
+				63FC6F291F2B2FC600F4DF39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PremierLeague;
+			productName = PremierLeague;
+			productReference = 63FC6F2B1F2B2FC600F4DF39 /* PremierLeague.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63FC6F231F2B2FC600F4DF39 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = David;
+				TargetAttributes = {
+					63FC6F2A1F2B2FC600F4DF39 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 7CZRA7KNK3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 63FC6F261F2B2FC600F4DF39 /* Build configuration list for PBXProject "PremierLeague" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63FC6F221F2B2FC600F4DF39;
+			productRefGroup = 63FC6F2C1F2B2FC600F4DF39 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63FC6F2A1F2B2FC600F4DF39 /* PremierLeague */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63FC6F291F2B2FC600F4DF39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63FC6F3C1F2B2FC600F4DF39 /* LaunchScreen.storyboard in Resources */,
+				63FC6F391F2B2FC600F4DF39 /* Assets.xcassets in Resources */,
+				63FC6F341F2B2FC600F4DF39 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63FC6F271F2B2FC600F4DF39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63FC6F2F1F2B2FC600F4DF39 /* AppDelegate.swift in Sources */,
+				63FC6F461F2B333400F4DF39 /* Matches.swift in Sources */,
+				63FC6F441F2B32C200F4DF39 /* MatchesTableViewCell.swift in Sources */,
+				63FC6F371F2B2FC600F4DF39 /* PremierLeague.xcdatamodeld in Sources */,
+				63FC6F481F2B36E500F4DF39 /* MatchesTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		63FC6F321F2B2FC600F4DF39 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63FC6F331F2B2FC600F4DF39 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		63FC6F3A1F2B2FC600F4DF39 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63FC6F3B1F2B2FC600F4DF39 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63FC6F3E1F2B2FC600F4DF39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		63FC6F3F1F2B2FC600F4DF39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63FC6F411F2B2FC600F4DF39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7CZRA7KNK3;
+				INFOPLIST_FILE = PremierLeague/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qtsvn.paul.PremierLeague;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		63FC6F421F2B2FC600F4DF39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7CZRA7KNK3;
+				INFOPLIST_FILE = PremierLeague/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qtsvn.paul.PremierLeague;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63FC6F261F2B2FC600F4DF39 /* Build configuration list for PBXProject "PremierLeague" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63FC6F3E1F2B2FC600F4DF39 /* Debug */,
+				63FC6F3F1F2B2FC600F4DF39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63FC6F401F2B2FC600F4DF39 /* Build configuration list for PBXNativeTarget "PremierLeague" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63FC6F411F2B2FC600F4DF39 /* Debug */,
+				63FC6F421F2B2FC600F4DF39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		63FC6F351F2B2FC600F4DF39 /* PremierLeague.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				63FC6F361F2B2FC600F4DF39 /* PremierLeague.xcdatamodel */,
+			);
+			currentVersion = 63FC6F361F2B2FC600F4DF39 /* PremierLeague.xcdatamodel */;
+			path = PremierLeague.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 63FC6F231F2B2FC600F4DF39 /* Project object */;
+}
