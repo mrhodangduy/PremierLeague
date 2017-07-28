@@ -15,6 +15,8 @@ class MatchesTableViewCell: UITableViewCell {
     @IBOutlet weak var lblAwayteam: UILabel!
     @IBOutlet weak var lblHomeScore: UILabel!
     @IBOutlet weak var lblAwayScore: UILabel!
+    @IBOutlet weak var lblTime: UILabel!
+    @IBOutlet weak var lblDate: UILabel!
     
     
     
