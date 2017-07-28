@@ -15,6 +15,8 @@
 		63FC6F441F2B32C200F4DF39 /* MatchesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FC6F431F2B32C200F4DF39 /* MatchesTableViewCell.swift */; };
 		63FC6F461F2B333400F4DF39 /* Matches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FC6F451F2B333400F4DF39 /* Matches.swift */; };
 		63FC6F481F2B36E500F4DF39 /* MatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FC6F471F2B36E500F4DF39 /* MatchesTableViewController.swift */; };
+		DA59F0871F2BAB4E00ADC275 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59F0861F2BAB4E00ADC275 /* TableViewController.swift */; };
+		DA59F0891F2BAB6F00ADC275 /* Table_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59F0881F2BAB6F00ADC275 /* Table_TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		63FC6F431F2B32C200F4DF39 /* MatchesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesTableViewCell.swift; sourceTree = "<group>"; };
 		63FC6F451F2B333400F4DF39 /* Matches.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matches.swift; sourceTree = "<group>"; };
 		63FC6F471F2B36E500F4DF39 /* MatchesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesTableViewController.swift; sourceTree = "<group>"; };
+		DA59F0861F2BAB4E00ADC275 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		DA59F0881F2BAB6F00ADC275 /* Table_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Table_TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				63FC6F431F2B32C200F4DF39 /* MatchesTableViewCell.swift */,
 				63FC6F451F2B333400F4DF39 /* Matches.swift */,
 				63FC6F471F2B36E500F4DF39 /* MatchesTableViewController.swift */,
+				DA59F0861F2BAB4E00ADC275 /* TableViewController.swift */,
+				DA59F0881F2BAB6F00ADC275 /* Table_TableViewCell.swift */,
 			);
 			path = PremierLeague;
 			sourceTree = "<group>";
@@ -146,7 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA59F0891F2BAB6F00ADC275 /* Table_TableViewCell.swift in Sources */,
 				63FC6F2F1F2B2FC600F4DF39 /* AppDelegate.swift in Sources */,
+				DA59F0871F2BAB4E00ADC275 /* TableViewController.swift in Sources */,
 				63FC6F461F2B333400F4DF39 /* Matches.swift in Sources */,
 				63FC6F441F2B32C200F4DF39 /* MatchesTableViewCell.swift in Sources */,
 				63FC6F371F2B2FC600F4DF39 /* PremierLeague.xcdatamodeld in Sources */,
@@ -314,6 +322,7 @@
 				63FC6F421F2B2FC600F4DF39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
