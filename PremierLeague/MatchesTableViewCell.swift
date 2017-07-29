@@ -17,8 +17,7 @@ class MatchesTableViewCell: UITableViewCell {
     @IBOutlet weak var lblAwayScore: UILabel!
     @IBOutlet weak var lblTime: UILabel!
     @IBOutlet weak var lblDate: UILabel!
-    
-    
+      
     
     override func awakeFromNib() {
         super.awakeFromNib()

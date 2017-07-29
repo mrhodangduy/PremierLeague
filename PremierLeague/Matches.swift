@@ -40,7 +40,7 @@ struct Match {
         self.result = result
     }
     
-    static let basePath:String = "http://api.football-data.org/v1/competitions/445/fixtures"
+    static let basePath:String = "http://api.football-data.org/v1/competitions/446/fixtures"
     
     static func matchList (completion: @escaping ([Match]?) -> ())
     {

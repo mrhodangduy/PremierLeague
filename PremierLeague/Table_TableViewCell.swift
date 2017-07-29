@@ -10,6 +10,11 @@ import UIKit
 
 class Table_TableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblRank: UILabel!
+    @IBOutlet weak var lblClubName: UILabel!
+    @IBOutlet weak var lblNumberofMatch: UILabel!
+    @IBOutlet weak var lblGDGoal: UILabel!
+    @IBOutlet weak var lblPoints: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

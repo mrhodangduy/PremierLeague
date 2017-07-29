@@ -18,7 +18,7 @@ class MatchesTableViewController: UITableViewController {
         let queue = DispatchQueue(label: "get data", qos: .default, attributes: .concurrent, autoreleaseFrequency: .never, target: nil)
         
         let activity = UIActivityIndicatorView(activityIndicatorStyle: .white)
-        activity.frame = CGRect(x: self.view.frame.width/2-10, y: self.view.frame.height/2-10, width: 20, height: 20)
+        activity.frame = CGRect(x: self.view.frame.width/2-10, y: self.view.frame.height/2-30, width: 20, height: 20)
 
         activity.color = #colorLiteral(red: 0.9117327332, green: 0.1899396479, blue: 0.079865776, alpha: 1)
         activity.hidesWhenStopped = true
@@ -26,7 +26,6 @@ class MatchesTableViewController: UITableViewController {
         
         self.view.addSubview(activity)
         
-        print(activity.frame)
         queue.async {
             Match.matchList { (results) in
                 for result in results!
@@ -64,7 +63,7 @@ class MatchesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MatchesTableViewCell
         
         if indexPath.row % 2 == 1 {
-            cell.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            cell.backgroundColor = #colorLiteral(red: 0.4078193307, green: 0.4078193307, blue: 0.4078193307, alpha: 1)
         }
         else
         {
@@ -86,10 +85,8 @@ class MatchesTableViewController: UITableViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "dd MMM,hh:mm a"
         let result = formatter.string(from:dateString!)
-        
-        
-        print(result)
-        
+       
+       
         //        print(result.components(separatedBy: ", "))
         
         //config cell
