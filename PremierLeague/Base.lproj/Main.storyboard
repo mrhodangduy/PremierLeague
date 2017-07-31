@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3To-7A-dKP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3To-7A-dKP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -48,14 +48,14 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpQ-gA-lS4">
                                             <rect key="frame" x="346" y="10" width="9" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <color key="shadowColor" red="0.25490197539999998" green="0.27450981740000002" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6D-i1-VUY">
                                             <rect key="frame" x="346" y="32" width="9" height="20"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <color key="shadowColor" red="0.25490197539999998" green="0.27450981740000002" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </label>
@@ -77,9 +77,19 @@
                                             <color key="textColor" red="0.87353267766497456" green="0.87353267766497456" blue="0.87353267766497456" alpha="0.86274614726027399" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r24-tn-Q0k">
+                                            <rect key="frame" x="30" y="25" width="20" height="16"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="xOt-oF-j4L"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="O6D-i1-VUY" firstAttribute="trailing" secondItem="ZpQ-gA-lS4" secondAttribute="trailing" id="49x-Hr-oE9"/>
+                                        <constraint firstItem="r24-tn-Q0k" firstAttribute="centerY" secondItem="hPd-dU-b9C" secondAttribute="centerY" id="8jb-vd-hNq"/>
                                         <constraint firstItem="7Sc-ZF-AH1" firstAttribute="top" secondItem="hPd-dU-b9C" secondAttribute="top" constant="10.25" id="8p9-P2-g2N"/>
                                         <constraint firstItem="htl-LS-9zg" firstAttribute="height" secondItem="7Sc-ZF-AH1" secondAttribute="height" id="9JO-Fo-ffM"/>
                                         <constraint firstItem="htl-LS-9zg" firstAttribute="top" secondItem="7Sc-ZF-AH1" secondAttribute="bottom" constant="2" id="ARn-pQ-XSG"/>
@@ -90,6 +100,7 @@
                                         <constraint firstItem="htl-LS-9zg" firstAttribute="leading" secondItem="7Sc-ZF-AH1" secondAttribute="leading" id="RcF-X2-HnP"/>
                                         <constraint firstAttribute="trailing" secondItem="ZpQ-gA-lS4" secondAttribute="trailing" constant="20" id="fis-q1-klf"/>
                                         <constraint firstItem="ZpQ-gA-lS4" firstAttribute="centerY" secondItem="7Sc-ZF-AH1" secondAttribute="centerY" id="h1a-oe-eCG"/>
+                                        <constraint firstItem="r24-tn-Q0k" firstAttribute="leading" secondItem="hPd-dU-b9C" secondAttribute="leading" constant="30" id="hnu-ig-gg0"/>
                                         <constraint firstItem="ZpQ-gA-lS4" firstAttribute="top" secondItem="7Sc-ZF-AH1" secondAttribute="top" id="jOa-ut-Dv4"/>
                                         <constraint firstAttribute="trailing" secondItem="O6D-i1-VUY" secondAttribute="trailing" constant="20" id="kAN-un-MXp"/>
                                         <constraint firstItem="rZx-Qb-5aj" firstAttribute="top" secondItem="hPd-dU-b9C" secondAttribute="top" constant="15" id="mVD-3W-Ynf"/>
@@ -102,6 +113,7 @@
                                     <outlet property="lblAwayScore" destination="O6D-i1-VUY" id="Y3y-b9-v2C"/>
                                     <outlet property="lblAwayteam" destination="htl-LS-9zg" id="0PC-e3-DT6"/>
                                     <outlet property="lblDate" destination="dte-nr-IpJ" id="1Tu-aF-lDZ"/>
+                                    <outlet property="lblFullTime" destination="r24-tn-Q0k" id="SHu-qt-YdN"/>
                                     <outlet property="lblHomeScore" destination="ZpQ-gA-lS4" id="CB5-Nu-mBj"/>
                                     <outlet property="lblHometeam" destination="7Sc-ZF-AH1" id="hxn-JE-ao3"/>
                                     <outlet property="lblTime" destination="rZx-Qb-5aj" id="1db-Um-hGb"/>
@@ -411,6 +423,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3To-7A-dKP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="TDb-dV-iSs">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>

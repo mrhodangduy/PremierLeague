@@ -18,7 +18,6 @@ class TableViewController: UIViewController {
     @IBOutlet weak var totalTableView: UITableView!
     @IBOutlet weak var tableScrollView: UIScrollView!
     
-    
     @IBOutlet weak var lblNumberofMath: UILabel!
     @IBOutlet weak var lblGDGoal: UILabel!
     @IBOutlet weak var lblPoints: UILabel!
@@ -32,6 +31,7 @@ class TableViewController: UIViewController {
         totalTableView.dataSource = self
         
         Standing.tableLeague { (results) in
+            
             for result in results!
             {
                 self.arrayStandingTotal.append(result)
@@ -40,7 +40,6 @@ class TableViewController: UIViewController {
                 }
             }
         }
-        
         
         // Do any additional setup after loading the view.
     }
@@ -57,7 +56,7 @@ class TableViewController: UIViewController {
         away.backgroundColor = #colorLiteral(red: 0.4078193307, green: 0.4078193307, blue: 0.4078193307, alpha: 1)
         buttonIsSelected = 1
         totalTableView.reloadData()
-
+        
         
     }
     
@@ -67,7 +66,7 @@ class TableViewController: UIViewController {
         away.backgroundColor = #colorLiteral(red: 0.4078193307, green: 0.4078193307, blue: 0.4078193307, alpha: 1)
         buttonIsSelected = 2
         totalTableView.reloadData()
-
+        
         
     }
     
@@ -75,7 +74,7 @@ class TableViewController: UIViewController {
         sender.backgroundColor = #colorLiteral(red: 0.7233663201, green: 0.7233663201, blue: 0.7233663201, alpha: 1)
         total.backgroundColor = #colorLiteral(red: 0.4078193307, green: 0.4078193307, blue: 0.4078193307, alpha: 1)
         home.backgroundColor = #colorLiteral(red: 0.4078193307, green: 0.4078193307, blue: 0.4078193307, alpha: 1)
-        buttonIsSelected = 2
+        buttonIsSelected = 3
         totalTableView.reloadData()
         
         
@@ -104,6 +103,7 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource
         
         let standingObject = arrayStandingTotal[indexPath.row]
         
+
         switch buttonIsSelected {
         case 1:
             
@@ -140,7 +140,7 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource
         default:
             print("default")
         }
-  
+        
         return cell
     }
     

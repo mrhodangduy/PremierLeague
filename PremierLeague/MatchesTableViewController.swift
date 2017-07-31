@@ -12,8 +12,16 @@ class MatchesTableViewController: UITableViewController {
     
     var arrMatchesList = [Match]()
     
+    var refresher:UIRefreshControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        refresher = UIRefreshControl()
+        refresher.addTarget(self, action: #selector (MatchesTableViewController.refresh), for: UIControlEvents.touchDown)
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        
+        self.view.addSubview(refresher)
         
         let queue = DispatchQueue(label: "get data", qos: .default, attributes: .concurrent, autoreleaseFrequency: .never, target: nil)
         
@@ -39,6 +47,12 @@ class MatchesTableViewController: UITableViewController {
             }
         }
         
+    }
+    
+    func refresh() {
+        
+        tableView.reloadData()
+        refresher.endRefreshing()
     }
     
     override func didReceiveMemoryWarning() {
@@ -89,15 +103,42 @@ class MatchesTableViewController: UITableViewController {
        
         //        print(result.components(separatedBy: ", "))
         
+        // get Status data
+        
+        
+        
         //config cell
         
         cell.lblHometeam.text = match.homeTeamName
         cell.lblAwayteam.text = match.awayTeamName
-        cell.lblHomeScore.text = match.result["goalsHomeTeam"] as? String
-        cell.lblAwayScore.text = match.result["goalsAwayTeam"] as? String
-        cell.lblDate.text = result.components(separatedBy: ",")[0]
-        cell.lblTime.text = result.components(separatedBy: ",")[1]
         
+        if (match.result["goalsHomeTeam"] as? Int) == nil || (match.result["goalsAwayTeam"] as? Int) == nil
+        {
+            cell.lblHomeScore.text = ""
+            cell.lblAwayScore.text = ""
+            
+        }
+        else
+        {
+            cell.lblHomeScore.text = String(describing: (match.result["goalsHomeTeam"] as? Int)!)
+            cell.lblAwayScore.text = String(describing: (match.result["goalsAwayTeam"] as? Int)!)
+        }
+        
+        let status = match.status
+        if status == "FINISHED"
+        {
+            cell.lblFullTime.text = "FT"
+            cell.lblDate.text = ""
+            cell.lblTime.text = ""
+
+        } else
+        {
+            cell.lblFullTime.text = ""
+            cell.lblDate.text = result.components(separatedBy: ",")[0]
+            cell.lblTime.text = result.components(separatedBy: ",")[1]
+
+        }
+       
         return cell
     }
     

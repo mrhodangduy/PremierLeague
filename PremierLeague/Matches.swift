@@ -40,7 +40,7 @@ struct Match {
         self.result = result
     }
     
-    static let basePath:String = "http://api.football-data.org/v1/competitions/446/fixtures"
+    static let basePath:String = "http://api.football-data.org/v1/competitions/444/fixtures"
     
     static func matchList (completion: @escaping ([Match]?) -> ())
     {
@@ -66,10 +66,7 @@ struct Match {
                             for fixture in fixtures
                             {
                                 let matchObject = try? Match(json: fixture)
-                                
                                 arrayMatchList.append(matchObject!)
-                                
-
                             }
                             
                         }

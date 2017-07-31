@@ -11,7 +11,6 @@ import Foundation
 struct Standing {
     let position:Int
     let teamName: String
-    let crestURI: String
     let playedGames:Int
     let points:Int
     let goals: Int
@@ -27,14 +26,12 @@ struct Standing {
         case missing(String)
         case invalid(String)
     }
-    
-    
+        
     init (json: [String: AnyObject]) throws
     {
         
         guard let position = json["position"] as? Int else { throw sync.missing("position is missing")}
         guard let teamName = json["teamName"] as? String else { throw sync.missing("teamName is missing")}
-        guard let crestURI = json["crestURI"] as? String else { throw sync.missing("crestURI is missing")}
         guard let playedGames = json["playedGames"] as? Int else { throw sync.missing("playedGames is missing")}
         guard let points = json["points"] as? Int else { throw sync.missing("points is missing")}
         guard let goals = json["goals"] as? Int else { throw sync.missing("goals is missing")}
@@ -48,7 +45,6 @@ struct Standing {
         
         self.position = position
         self.teamName = teamName
-        self.crestURI = crestURI
         self.playedGames = playedGames
         self.points = points
         self.goals = goals
@@ -59,10 +55,10 @@ struct Standing {
         self.draws = draws
         self.home = home
         self.away = away
-       
+        
     }
     
-    static let basePath = "http://api.football-data.org/v1/competitions/446/leagueTable"
+    static let basePath = "http://api.football-data.org/v1/competitions/444/leagueTable"
     
     static func tableLeague (completion: @escaping ([Standing]?) -> ())
     {
@@ -83,14 +79,14 @@ struct Standing {
                     {
                         let myJson = try JSONSerialization.jsonObject(with: content, options: .mutableContainers) as? [String: AnyObject]
                         
+                        
                         if let standing = myJson?["standing"] as? Array<[String:AnyObject]>
                         {
                             for standingObject in standing
                             {
-                                if let object = try? Standing(json: standingObject)
-                                {
-                                    arrayStanding.append(object)
-                                }
+                                let object = try? Standing(json: standingObject)
+                                arrayStanding.append(object!)
+                                
                             }
                         }
                         
@@ -105,23 +101,7 @@ struct Standing {
             }
         }
         task.resume()
-                
+        
     }
     
 }
-//struct Home {
-//    
-//    let goals: Int
-//    let goalsAgainst: Int
-//    let losses: Int
-//    let wins: Int
-//    let draws: Int
-//    
-//}
-//struct Away {
-//    let goals: Int
-//    let goalsAgainst: Int
-//    let losses: Int
-//    let wins: Int
-//    let draws: Int
-//}
