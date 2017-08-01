@@ -58,10 +58,16 @@ struct Standing {
         
     }
     
-    static let basePath = "http://api.football-data.org/v1/competitions/444/leagueTable"
+//    static let basePath = "https://api.myjson.com/bins/7yz2d"
+
+    // ID: 445
     
-    static func tableLeague (completion: @escaping ([Standing]?) -> ())
+//    static let basepath = "https://jsonblob.com/api/jsonBlob/21ed2281-768b-11e7-9e0d-8985f854fbdf"
+    static let basePath = "https://api.myjson.com/bins/zcww5"
+    
+    static func tableLeague (leagueID: Int, completion: @escaping ([Standing]?) -> ())
     {
+
         let url = URL(string: basePath)
         let task = URLSession.shared.dataTask(with: url!) { (data, respone, error) in
             

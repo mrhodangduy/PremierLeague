@@ -14,8 +14,11 @@ class MatchesTableViewController: UITableViewController {
     
     var refresher:UIRefreshControl!
     
+    @IBOutlet weak var menuBar: UIBarButtonItem!
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         refresher = UIRefreshControl()
         refresher.addTarget(self, action: #selector (MatchesTableViewController.refresh), for: UIControlEvents.touchDown)
@@ -28,14 +31,14 @@ class MatchesTableViewController: UITableViewController {
         let activity = UIActivityIndicatorView(activityIndicatorStyle: .white)
         activity.frame = CGRect(x: self.view.frame.width/2-10, y: self.view.frame.height/2-30, width: 20, height: 20)
 
-        activity.color = #colorLiteral(red: 0.9117327332, green: 0.1899396479, blue: 0.079865776, alpha: 1)
+        activity.color = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         activity.hidesWhenStopped = true
         activity.startAnimating()
         
         self.view.addSubview(activity)
         
         queue.async {
-            Match.matchList { (results) in
+            Match.matchList(leagueID: 444, completion: { (results) in
                 for result in results!
                 {
                     self.arrMatchesList.append(result)
@@ -44,7 +47,8 @@ class MatchesTableViewController: UITableViewController {
                         activity.stopAnimating()
                     }
                 }
-            }
+            })
+            
         }
         
     }
@@ -147,7 +151,6 @@ class MatchesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(arrMatchesList[indexPath.row])
     }
     
 }

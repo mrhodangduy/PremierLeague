@@ -30,19 +30,35 @@ class TableViewController: UIViewController {
         totalTableView.delegate = self
         totalTableView.dataSource = self
         
-        Standing.tableLeague { (results) in
-            
-            for result in results!
-            {
-                self.arrayStandingTotal.append(result)
-                DispatchQueue.main.async {
-                    self.totalTableView.reloadData()
+        let queue = DispatchQueue(label: "get data", qos: .default, attributes: .concurrent, autoreleaseFrequency: .never, target: nil)
+        
+        let activity = UIActivityIndicatorView(activityIndicatorStyle: .white)
+        activity.frame = CGRect(x: self.view.frame.width/2-10, y: self.view.frame.height/2-30, width: 20, height: 20)
+        
+        activity.color = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        activity.hidesWhenStopped = true
+        activity.startAnimating()
+        
+        self.view.addSubview(activity)
+        
+        queue.async {
+            Standing.tableLeague(leagueID: 444) { (results) in
+                for result in results!
+                {
+                    self.arrayStandingTotal.append(result)
+                    DispatchQueue.main.async {
+                        self.totalTableView.reloadData()
+                        activity.stopAnimating()
+                    }
                 }
             }
         }
         
+        
+        
         // Do any additional setup after loading the view.
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

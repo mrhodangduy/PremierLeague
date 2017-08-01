@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63D77AE41F2ED91C00957CE3 /* Competitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D77AE31F2ED91C00957CE3 /* Competitions.swift */; };
+		63D77AE61F2EDFDA00957CE3 /* LeagueID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D77AE51F2EDFDA00957CE3 /* LeagueID.swift */; };
+		63DE4A8C1F3068E90034B0DE /* Team_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE4A8B1F3068E90034B0DE /* Team_TableViewCell.swift */; };
+		63DE4A8E1F3069550034B0DE /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE4A8D1F3069550034B0DE /* TeamViewController.swift */; };
+		63DE4A901F3069B00034B0DE /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE4A8F1F3069B00034B0DE /* Team.swift */; };
+		63DE4A921F3073AC0034B0DE /* Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE4A911F3073AC0034B0DE /* Basic.swift */; };
+		63DE4A941F3082A80034B0DE /* BrefingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DE4A931F3082A80034B0DE /* BrefingViewController.swift */; };
 		63FC6F2F1F2B2FC600F4DF39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FC6F2E1F2B2FC600F4DF39 /* AppDelegate.swift */; };
 		63FC6F341F2B2FC600F4DF39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63FC6F321F2B2FC600F4DF39 /* Main.storyboard */; };
 		63FC6F371F2B2FC600F4DF39 /* PremierLeague.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 63FC6F351F2B2FC600F4DF39 /* PremierLeague.xcdatamodeld */; };
@@ -21,6 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63D77AE31F2ED91C00957CE3 /* Competitions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Competitions.swift; sourceTree = "<group>"; };
+		63D77AE51F2EDFDA00957CE3 /* LeagueID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeagueID.swift; sourceTree = "<group>"; };
+		63DE4A8B1F3068E90034B0DE /* Team_TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team_TableViewCell.swift; sourceTree = "<group>"; };
+		63DE4A8D1F3069550034B0DE /* TeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
+		63DE4A8F1F3069B00034B0DE /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		63DE4A911F3073AC0034B0DE /* Basic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Basic.swift; sourceTree = "<group>"; };
+		63DE4A931F3082A80034B0DE /* BrefingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrefingViewController.swift; sourceTree = "<group>"; };
 		63FC6F2B1F2B2FC600F4DF39 /* PremierLeague.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PremierLeague.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63FC6F2E1F2B2FC600F4DF39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63FC6F331F2B2FC600F4DF39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,6 +97,8 @@
 			children = (
 				63FC6F471F2B36E500F4DF39 /* MatchesTableViewController.swift */,
 				DA59F0861F2BAB4E00ADC275 /* TableViewController.swift */,
+				63DE4A8D1F3069550034B0DE /* TeamViewController.swift */,
+				63DE4A931F3082A80034B0DE /* BrefingViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -92,6 +108,7 @@
 			children = (
 				63FC6F431F2B32C200F4DF39 /* MatchesTableViewCell.swift */,
 				DA59F0881F2BAB6F00ADC275 /* Table_TableViewCell.swift */,
+				63DE4A8B1F3068E90034B0DE /* Team_TableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -101,6 +118,10 @@
 			children = (
 				63FC6F451F2B333400F4DF39 /* Matches.swift */,
 				DA59F08A1F2C411100ADC275 /* Table.swift */,
+				63D77AE31F2ED91C00957CE3 /* Competitions.swift */,
+				63D77AE51F2EDFDA00957CE3 /* LeagueID.swift */,
+				63DE4A8F1F3069B00034B0DE /* Team.swift */,
+				63DE4A911F3073AC0034B0DE /* Basic.swift */,
 			);
 			name = Module;
 			sourceTree = "<group>";
@@ -147,6 +168,7 @@
 					63FC6F2A1F2B2FC600F4DF39 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 7CZRA7KNK3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -188,12 +210,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA59F0891F2BAB6F00ADC275 /* Table_TableViewCell.swift in Sources */,
+				63DE4A8E1F3069550034B0DE /* TeamViewController.swift in Sources */,
+				63DE4A921F3073AC0034B0DE /* Basic.swift in Sources */,
+				63DE4A901F3069B00034B0DE /* Team.swift in Sources */,
 				63FC6F2F1F2B2FC600F4DF39 /* AppDelegate.swift in Sources */,
+				63DE4A941F3082A80034B0DE /* BrefingViewController.swift in Sources */,
 				DA59F0871F2BAB4E00ADC275 /* TableViewController.swift in Sources */,
 				63FC6F461F2B333400F4DF39 /* Matches.swift in Sources */,
+				63D77AE41F2ED91C00957CE3 /* Competitions.swift in Sources */,
 				63FC6F441F2B32C200F4DF39 /* MatchesTableViewCell.swift in Sources */,
 				63FC6F371F2B2FC600F4DF39 /* PremierLeague.xcdatamodeld in Sources */,
+				63D77AE61F2EDFDA00957CE3 /* LeagueID.swift in Sources */,
 				DA59F08B1F2C411100ADC275 /* Table.swift in Sources */,
+				63DE4A8C1F3068E90034B0DE /* Team_TableViewCell.swift in Sources */,
 				63FC6F481F2B36E500F4DF39 /* MatchesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,11 +346,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7CZRA7KNK3;
 				INFOPLIST_FILE = PremierLeague/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qtsvn.paul.PremierLeague;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PremierLeague/PremierLeague-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -330,11 +362,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 7CZRA7KNK3;
 				INFOPLIST_FILE = PremierLeague/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qtsvn.paul.PremierLeague;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PremierLeague/PremierLeague-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

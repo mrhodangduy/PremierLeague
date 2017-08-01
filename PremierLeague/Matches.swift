@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 struct Match {
     let date:String
     let status:String
@@ -40,10 +38,10 @@ struct Match {
         self.result = result
     }
     
-    static let basePath:String = "http://api.football-data.org/v1/competitions/444/fixtures"
     
-    static func matchList (completion: @escaping ([Match]?) -> ())
+    static func matchList (leagueID: Int,completion: @escaping ([Match]?) -> ())
     {
+        let basePath:String = "https://jsonblob.com/api/jsonBlob/4236a7a8-7687-11e7-9e0d-b1f590d8bdae"
         let url = URL(string: basePath)
         let task = URLSession.shared.dataTask(with: url!) { (data, respone, error) in
             
