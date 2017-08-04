@@ -8,7 +8,10 @@
 
 import Foundation
 
-var numberofteams:Int?
+struct Profiles {
+    let fixtures: [String: AnyObject]
+    let players: [String: AnyObject]
+}
 
 struct Teams {
     let name: String
@@ -28,10 +31,12 @@ struct Teams {
         guard let shortName = json["shortName"] as? String else { throw sync.missing("shortName is missing")}
         guard let crestUrl = json["crestUrl"] as? String else { throw sync.missing("crestUrl is missing")}
         
+        
         self.name = name
         self.code = code
         self.shortName = shortName
         self.crestUrl = crestUrl
+        
         
     }
     
@@ -56,15 +61,16 @@ struct Teams {
                         
                         let json = try JSONSerialization.jsonObject(with: content, options: .mutableContainers) as? [String: AnyObject]
                         
-                        numberofteams = (json?["count"] as? Int)!
                         
+                       
                         if let jsonTeam = json?["teams"] as? Array<[String:AnyObject]>
                         {
+                            
+                            
                             for team in jsonTeam
                             {
                                 let teamObject = try? Teams(json: team)
                                 arrayTeams.append(teamObject!)
-                                
                             }
                         }
                     }

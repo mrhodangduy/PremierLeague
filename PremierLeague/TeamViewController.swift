@@ -41,9 +41,9 @@ class TeamViewController: UIViewController {
                     DispatchQueue.main.async {
                         self.teamTableView.reloadData()
                         activity.stopAnimating()
-                        self.lblnumberofTeam.text = String(numberofteams!)
                     }
                 }
+                self.lblnumberofTeam.text = String(self.arrayTeam.count)
                 
             }
         }
@@ -72,14 +72,14 @@ extension TeamViewController: UITableViewDelegate, UITableViewDataSource
         let teamObject = arrayTeam[indexPath.row]
         
         cell.lblstt.text = String(indexPath.row + 1)
-        cell.imageTeam.loadImage(link: teamObject.crestUrl)
+//        cell.imageTeam.loadImage(link: teamObject.crestUrl)
         cell.lblTeamName.text = teamObject.name
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 30
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

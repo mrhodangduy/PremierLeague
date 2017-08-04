@@ -15,6 +15,9 @@ class Table_TableViewCell: UITableViewCell {
     @IBOutlet weak var lblNumberofMatch: UILabel!
     @IBOutlet weak var lblGDGoal: UILabel!
     @IBOutlet weak var lblPoints: UILabel!
+    @IBOutlet weak var lblLose: UILabel!
+    @IBOutlet weak var lblWin: UILabel!
+    @IBOutlet weak var lblDraw: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

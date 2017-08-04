@@ -16,11 +16,13 @@ class TableViewController: UIViewController {
     @IBOutlet weak var home: UIButton!
     @IBOutlet weak var away: UIButton!
     @IBOutlet weak var totalTableView: UITableView!
-    @IBOutlet weak var tableScrollView: UIScrollView!
     
     @IBOutlet weak var lblNumberofMath: UILabel!
+    @IBOutlet weak var lblDraw: UILabel!
     @IBOutlet weak var lblGDGoal: UILabel!
     @IBOutlet weak var lblPoints: UILabel!
+    @IBOutlet weak var lblWin: UILabel!
+    @IBOutlet weak var lblLose: UILabel!
     
     var buttonIsSelected = 1
     
@@ -119,6 +121,16 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource
         
         let standingObject = arrayStandingTotal[indexPath.row]
         
+        let winH = standingObject.home["wins"] as! Int
+        let drawH = standingObject.home["draws"] as! Int
+        let loseH = standingObject.home["losses"] as! Int
+        let sumH = winH + drawH + loseH
+        
+        let winA = standingObject.away["wins"] as! Int
+        let drawA = standingObject.away["draws"] as! Int
+        let loseA = standingObject.away["losses"] as! Int
+        let sumA = winA + drawA + loseA
+        
 
         switch buttonIsSelected {
         case 1:
@@ -129,6 +141,9 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource
             lblGDGoal.text = "GD"
             lblPoints.text = "PTS"
             cell.lblNumberofMatch.text = String(standingObject.playedGames)
+            cell.lblWin.text = String(standingObject.wins)
+            cell.lblDraw.text = String(standingObject.draws)
+            cell.lblLose.text = String(standingObject.losses)
             cell.lblGDGoal.text = String(standingObject.goalDifference)
             cell.lblPoints.text = String(standingObject.points)
             
@@ -136,23 +151,36 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource
             
             cell.lblRank.text = ""
             cell.lblClubName.text = standingObject.teamName
-            lblNumberofMath.text = "W"
-            lblGDGoal.text = "D"
-            lblPoints.text = "L"
-            cell.lblNumberofMatch.text = String(describing: (standingObject.home["wins"]) as! Int)
-            
-            cell.lblGDGoal.text = String(standingObject.home["draws"] as! Int)
-            cell.lblPoints.text = String(describing: (standingObject.home["losses"]) as! Int)
+            lblNumberofMath.text = "P"
+            lblWin.text = "W"
+            lblDraw.text = "D"
+            lblLose.text = "L"
+            lblGDGoal.text = "G"
+            lblPoints.text = "GA"
+            cell.lblNumberofMatch.text = String(sumH)
+            cell.lblWin.text = String(describing: (standingObject.home["wins"]) as! Int)
+            cell.lblDraw.text = String(standingObject.home["draws"] as! Int)
+            cell.lblLose.text = String(describing: (standingObject.home["losses"]) as! Int)
+            cell.lblGDGoal.text = String(describing: (standingObject.home["goals"]) as! Int)
+            cell.lblPoints.text = String(describing: (standingObject.home["goalsAgainst"]) as! Int)
             
         case 3:
             
+            cell.lblRank.text = ""
             cell.lblClubName.text = standingObject.teamName
-            lblNumberofMath.text = "W"
-            lblGDGoal.text = "D"
-            lblPoints.text = "L"
-            cell.lblNumberofMatch.text = String(describing: (standingObject.away["wins"]) as! Int)
-            cell.lblGDGoal.text = String(describing: (standingObject.away["draws"]) as! Int)
-            cell.lblPoints.text = String(describing: (standingObject.away["losses"]) as! Int)
+            lblNumberofMath.text = "P"
+            lblWin.text = "W"
+            lblDraw.text = "D"
+            lblLose.text = "L"
+            lblGDGoal.text = "G"
+            lblPoints.text = "GA"
+            cell.lblNumberofMatch.text = String(sumA)
+            cell.lblWin.text = String(describing: (standingObject.away["wins"]) as! Int)
+            cell.lblDraw.text = String(standingObject.away["draws"] as! Int)
+            cell.lblLose.text = String(describing: (standingObject.away["losses"]) as! Int)
+            cell.lblGDGoal.text = String(describing: (standingObject.away["goals"]) as! Int)
+            cell.lblPoints.text = String(describing: (standingObject.away["goalsAgainst"]) as! Int)
+            
         default:
             print("default")
         }
